@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react';
 import preload from '../data.json';
 import ShowCard from './ShowCard';
@@ -6,6 +8,7 @@ class Search extends Component {
   state = {
     searchTerm: ''
   };
+
   handleSearchTermChange = event => {
     this.setState({ searchTerm: event.target.value });
   };
