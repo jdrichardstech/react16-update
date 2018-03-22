@@ -10,12 +10,12 @@ class Search extends Component {
     searchTerm: ''
   };
 
-  handleSearchTermChange = (event: SyntheticKeyboardEvent & { target: HTMLInputElement }) => {
-    this.setState({ searchTerm: event.target.value });
-  };
-
   props: {
     shows: Array<Show>
+  };
+
+  handleSearchTermChange = (event: SyntheticKeyboardEvent & { target: HTMLInputElement }) => {
+    this.setState({ searchTerm: event.target.value });
   };
 
   render() {
