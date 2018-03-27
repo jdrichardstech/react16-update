@@ -1,3 +1,4 @@
+import { SET_SEARCH_TERM } from '../js/actions';
 // @flow
 
 export type Show = {
@@ -14,3 +15,12 @@ declare var module: {
     accept(path: string, callback: () => void): void
   }
 };
+
+declare type ActionType = 'SET_SEARCH_TERM';
+
+declare type ActionT<A: ActionType, P> = {|
+  action: A,
+  payload: P
+|};
+
+export type Action = ActionT<'SET_SEARCH_TERM', string>;
