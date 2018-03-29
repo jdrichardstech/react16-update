@@ -1,4 +1,3 @@
-import { SET_SEARCH_TERM } from '../js/actions';
 // @flow
 
 export type Show = {
