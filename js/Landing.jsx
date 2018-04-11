@@ -7,7 +7,6 @@ import type { RouterHistory } from 'react-router-dom';
 import { setSearchTerm } from './actionCreators';
 
 class Landing extends Component {
-  state: {};
   props: {
     searchTerm: string,
     handleSearchTermChange: Function,
@@ -40,12 +39,10 @@ class Landing extends Component {
 }
 
 const mapStateToProps = state => ({ searchTerm: state.searchTerm });
-const mapDispatchToProps = (dispatch: Function) => {
-  return {
-    handleSearchTermChange: event => {
-      dispatch(setSearchTerm(event.target.value));
-    }
-  };
-};
+const mapDispatchToProps = (dispatch: Function) => ({
+  handleSearchTermChange: event => {
+    dispatch(setSearchTerm(event.target.value));
+  }
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);

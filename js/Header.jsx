@@ -36,7 +36,7 @@ Header.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  showSearch: state.searchTerm
+  searchTerm: state.searchTerm
 });
 
 const mapDispatchToProps = (dispatch: Function) => ({
